@@ -13,13 +13,14 @@ channels:
 #   CONDA_SUBDIR: osx-64
 
 dependencies:
-  - python=3.8
+#  - python=3.8
+  - python=3.10
   - pip
 
   - pip:
       # Install nupic.torch libraries in develop mode.
       # Assume libraries were cloned into ${HOME}/nta folder
-      - -e ${HOME}/nta/nupic.torch
+      - -e ${NUPIC_HOME}/nupic.torch
 
       # Install nupic.research and its dependencies 
       - -r requirements.txt
